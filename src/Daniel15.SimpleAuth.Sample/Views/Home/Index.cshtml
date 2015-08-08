@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Hello World</h2>
+<p>This is an example of SimpleAuth. Click the "Log In" link above to log in. The default username and password are "user@example.com" and "password".</p>
+
+@if (User.Identity.IsAuthenticated)
+{
+	<p><strong>You are logged in as @User.Identity.Name</strong></p>
+}
+else
+{
+	<p><strong>You are not logged in</strong></p>
+}

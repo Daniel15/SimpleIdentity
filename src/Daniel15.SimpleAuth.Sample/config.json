@@ -1,0 +1,11 @@
+{
+  "Auth": {
+    "Users": {
+      "USER@EXAMPLE.COM": {
+        "Email": "user@example.com",
+        "NormalizedUserName": "USER@EXAMPLE.COM",
+        "PasswordHash": "AQAAAAEAACcQAAAAEJOYL0MGZ5CNnERvqzI2Wl9eJLXMsuchKP1EIWGQneZ1GuNCjheC4pD1AWgVy+decQ=="
+      }
+    }
+  }
+}
