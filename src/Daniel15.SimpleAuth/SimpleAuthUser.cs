@@ -10,8 +10,8 @@ namespace Daniel15.SimpleAuth
 	/// <summary>
 	/// A user in SimpleAuth
 	/// </summary>
-    public class SimpleAuthUser
-    {
+	public class SimpleAuthUser
+	{
 		/// <summary>
 		/// Gets or sets the user's email address.
 		/// </summary>

@@ -15,27 +15,27 @@ namespace Daniel15.SimpleAuth.Setup
 	/// <summary>
 	/// Setup program for SimpleAuth. Allows you to configure your username and password.
 	/// </summary>
-    public class Program
-    {
-        public void Main(string[] args)
-        {
+	public class Program
+	{
+		public void Main(string[] args)
+		{
 			Console.WriteLine(
 				"Setup for SimpleAuth. Enter your details and the relevant config section will "+
 				"be generated. Note that your password will be displayed as you enter it."
 			);
 			var email = Prompt("Email");
 			var password = Prompt("Password");
-	        Console.WriteLine();
+			Console.WriteLine();
 
-	        var user = CreateUser(email, password);
-	        var configSection = new
-	        {
-		        Users = new Dictionary<string, SimpleAuthUser> {{user.NormalizedUserName, user}},
-	        };
-	        var serializedConfig = JsonConvert.SerializeObject(configSection, Formatting.Indented);
-	        Console.WriteLine(serializedConfig);
-	        Console.Read();
-        }
+			var user = CreateUser(email, password);
+			var configSection = new
+			{
+				Users = new Dictionary<string, SimpleAuthUser> {{user.NormalizedUserName, user}},
+			};
+			var serializedConfig = JsonConvert.SerializeObject(configSection, Formatting.Indented);
+			Console.WriteLine(serializedConfig);
+			Console.Read();
+		}
 
 		/// <summary>
 		/// Creates a user model with the specified email address and password.
@@ -61,10 +61,10 @@ namespace Daniel15.SimpleAuth.Setup
 		/// </summary>
 		/// <param name="prompt">Prompt to display</param>
 		/// <returns>Value entered by the user</returns>
-	    private static string Prompt(string prompt)
-	    {
-		    Console.Write("{0}: ", prompt);
-		    return Console.ReadLine().Trim();
-	    }
-    }
+		private static string Prompt(string prompt)
+		{
+			Console.Write("{0}: ", prompt);
+			return Console.ReadLine().Trim();
+		}
+	}
 }

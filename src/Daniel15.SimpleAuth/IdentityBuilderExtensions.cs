@@ -14,7 +14,7 @@ namespace Daniel15.SimpleAuth
 	/// <summary>
 	/// Extensions to <see cref="IdentityBuilder"/> allowing registration of SimpleAuth services.
 	/// </summary>
-    public static class IdentityBuilderExtensions
+	public static class IdentityBuilderExtensions
 	{
 		/// <summary>
 		/// Configures SimpleAuth

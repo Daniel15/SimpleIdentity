@@ -122,7 +122,7 @@ namespace Daniel15.SimpleAuth
 		/// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
 		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, returning true if the specified <paramref name="user"/> has a password
-		///             otherwise false.
+		///			 otherwise false.
 		/// </returns>
 		public Task<bool> HasPasswordAsync(TUser user, CancellationToken cancellationToken)
 		{
@@ -144,13 +144,13 @@ namespace Daniel15.SimpleAuth
 
 		/// <summary>
 		/// Gets a flag indicating whether the email address for the specified <paramref name="user"/> has been verified, true if the email address is verified otherwise
-		///             false, as an asynchronous operation.
+		///			 false, as an asynchronous operation.
 		/// </summary>
 		/// <param name="user">The user whose email confirmation status should be returned.</param>
 		/// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
 		/// The task object containing the results of the asynchronous operation, a flag indicating whether the email address for the specified <paramref name="user"/>
-		///             has been confirmed or not.
+		///			 has been confirmed or not.
 		/// </returns>
 		public Task<bool> GetEmailConfirmedAsync(TUser user, CancellationToken cancellationToken)
 		{

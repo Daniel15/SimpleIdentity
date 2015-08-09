@@ -10,7 +10,7 @@ namespace Daniel15.SimpleAuth
 	/// <summary>
 	/// A role in SimpleAuth. Currently unused.
 	/// </summary>
-    public class SimpleAuthRole
-    {
-    }
+	public class SimpleAuthRole
+	{
+	}
 }

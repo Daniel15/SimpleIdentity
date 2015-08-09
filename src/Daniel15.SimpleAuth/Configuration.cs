@@ -13,8 +13,8 @@ namespace Daniel15.SimpleAuth
 	/// Configuration section for SimpleAuth
 	/// </summary>
 	/// <typeparam name="TUser">Model type of the user</typeparam>
-    public class Configuration<TUser> where TUser : SimpleAuthUser
-    {
+	public class Configuration<TUser> where TUser : SimpleAuthUser
+	{
 		/// <summary>
 		/// Gets or sets all the users contained within the configuration.
 		/// </summary>
