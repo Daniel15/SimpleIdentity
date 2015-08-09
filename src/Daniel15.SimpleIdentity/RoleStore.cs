@@ -10,13 +10,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 
-namespace Daniel15.SimpleAuth
+namespace Daniel15.SimpleIdentity
 {
 	/// <summary>
-	/// Role store for SimpleAuth. Currently does not do anything.
+	/// Role store for SimpleIdentity. Currently does not do anything.
 	/// </summary>
 	/// <typeparam name="TRole">Type of the role model</typeparam>
-	public class RoleStore<TRole> : IRoleStore<TRole> where TRole : SimpleAuthRole
+	public class RoleStore<TRole> : IRoleStore<TRole> where TRole : SimpleIdentityRole
 	{
 		/// <summary>
 		/// Creates a new role in a store as an asynchronous operation.

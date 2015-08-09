@@ -9,21 +9,21 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 
-namespace Daniel15.SimpleAuth
+namespace Daniel15.SimpleIdentity
 {
 	/// <summary>
-	/// Extensions to <see cref="IdentityBuilder"/> allowing registration of SimpleAuth services.
+	/// Extensions to <see cref="IdentityBuilder"/> allowing registration of SimpleIdentity services.
 	/// </summary>
 	public static class IdentityBuilderExtensions
 	{
 		/// <summary>
-		/// Configures SimpleAuth
+		/// Configures SimpleIdentity
 		/// </summary>
 		/// <typeparam name="TUser">Type of the user model.</typeparam>
 		/// <param name="builder">Identity builder.</param>
-		/// <param name="config">SimpleAuth configuration section.</param>
+		/// <param name="config">SimpleIdentity configuration section.</param>
 		/// <returns>The identity builder</returns>
-		public static IdentityBuilder AddSimpleAuth<TUser>(this IdentityBuilder builder, IConfiguration config) where TUser : SimpleAuthUser
+		public static IdentityBuilder AddSimpleIdentity<TUser>(this IdentityBuilder builder, IConfiguration config) where TUser : SimpleIdentityUser
 		{
 			builder.Services.Configure<Configuration<TUser>>(config);
 

@@ -7,7 +7,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Daniel15.SimpleAuth.Sample.ViewModels
+namespace Daniel15.SimpleIdentity.Sample.ViewModels
 {
 	public class LoginViewModel
 	{

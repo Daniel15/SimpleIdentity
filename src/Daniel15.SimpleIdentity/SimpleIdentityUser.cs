@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree. 
  */
 
-namespace Daniel15.SimpleAuth
+namespace Daniel15.SimpleIdentity
 {
 	/// <summary>
-	/// A user in SimpleAuth
+	/// A user in SimpleIdentity
 	/// </summary>
-	public class SimpleAuthUser
+	public class SimpleIdentityUser
 	{
 		/// <summary>
 		/// Gets or sets the user's email address.

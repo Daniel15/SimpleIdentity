@@ -13,7 +13,7 @@ using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using Microsoft.Framework.Runtime;
 
-namespace Daniel15.SimpleAuth.Sample
+namespace Daniel15.SimpleIdentity.Sample
 {
 	public class Startup
 	{
@@ -41,8 +41,8 @@ namespace Daniel15.SimpleAuth.Sample
 		public void ConfigureServices(IServiceCollection services)
 		{
 			// Add Identity services to the services container.
-			services.AddIdentity<SimpleAuthUser, SimpleAuthRole>()
-				.AddSimpleAuth<SimpleAuthUser>(Configuration.GetConfigurationSection("Auth"))
+			services.AddIdentity<SimpleIdentityUser, SimpleIdentityRole>()
+				.AddSimpleIdentity<SimpleIdentityUser>(Configuration.GetConfigurationSection("Auth"))
 				.AddDefaultTokenProviders();
 
 			// Add MVC services to the services container.

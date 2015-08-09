@@ -12,17 +12,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.Framework.OptionsModel;
 
-namespace Daniel15.SimpleAuth
+namespace Daniel15.SimpleIdentity
 {
 	/// <summary>
-	/// The user store in SimpleAuth. Handles retrieving user data from the configuration.
+	/// The user store in SimpleIdentity. Handles retrieving user data from the configuration.
 	/// </summary>
 	/// <typeparam name="TUser">Type of the user model</typeparam>
 	public class UserStore<TUser> : 
 		IUserPasswordStore<TUser>, 
 		IUserEmailStore<TUser>, 
 		IQueryableUserStore<TUser>
-		where TUser : SimpleAuthUser
+		where TUser : SimpleIdentityUser
 	{
 		private readonly Configuration<TUser> _config;
 

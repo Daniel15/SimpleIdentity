@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree. 
  */
 
-namespace Daniel15.SimpleAuth
+namespace Daniel15.SimpleIdentity
 {
 	/// <summary>
-	/// A role in SimpleAuth. Currently unused.
+	/// A role in SimpleIdentity. Currently unused.
 	/// </summary>
-	public class SimpleAuthRole
+	public class SimpleIdentityRole
 	{
 	}
 }

@@ -10,17 +10,17 @@ using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
 using Newtonsoft.Json;
 
-namespace Daniel15.SimpleAuth.Setup
+namespace Daniel15.SimpleIdentity.Setup
 {
 	/// <summary>
-	/// Setup program for SimpleAuth. Allows you to configure your username and password.
+	/// Setup program for SimpleIdentity. Allows you to configure your username and password.
 	/// </summary>
 	public class Program
 	{
 		public void Main(string[] args)
 		{
 			Console.WriteLine(
-				"Setup for SimpleAuth. Enter your details and the relevant config section will "+
+				"Setup for SimpleIdentity. Enter your details and the relevant config section will "+
 				"be generated. Note that your password will be displayed as you enter it."
 			);
 			var email = Prompt("Email");
@@ -30,7 +30,7 @@ namespace Daniel15.SimpleAuth.Setup
 			var user = CreateUser(email, password);
 			var configSection = new
 			{
-				Users = new Dictionary<string, SimpleAuthUser> {{user.NormalizedUserName, user}},
+				Users = new Dictionary<string, SimpleIdentityUser> {{user.NormalizedUserName, user}},
 			};
 			var serializedConfig = JsonConvert.SerializeObject(configSection, Formatting.Indented);
 			Console.WriteLine(serializedConfig);
@@ -43,15 +43,15 @@ namespace Daniel15.SimpleAuth.Setup
 		/// <param name="email">Email address of the user</param>
 		/// <param name="password">Password of the user</param>
 		/// <returns></returns>
-		private static SimpleAuthUser CreateUser(string email, string password)
+		private static SimpleIdentityUser CreateUser(string email, string password)
 		{
 			var normalizer = new UpperInvariantLookupNormalizer();
-			var user = new SimpleAuthUser
+			var user = new SimpleIdentityUser
 			{
 				Email = email,
 				NormalizedUserName = normalizer.Normalize(email),
 			};
-			var hasher = new PasswordHasher<SimpleAuthUser>();
+			var hasher = new PasswordHasher<SimpleIdentityUser>();
 			user.PasswordHash = hasher.HashPassword(user, password);
 			return user;
 		}

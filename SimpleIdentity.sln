@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleAuth.Sample", "src\Daniel15.SimpleAuth.Sample\Daniel15.SimpleAuth.Sample.xproj", "{F3202239-ED1F-4F72-A13E-3438F8EC9CF4}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleIdentity.Sample", "src\Daniel15.SimpleIdentity.Sample\Daniel15.SimpleIdentity.Sample.xproj", "{F3202239-ED1F-4F72-A13E-3438F8EC9CF4}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleAuth.Setup", "src\Daniel15.SimpleAuth.Setup\Daniel15.SimpleAuth.Setup.xproj", "{58BE296D-2769-4A94-80CD-D127A5272B00}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleIdentity.Setup", "src\Daniel15.SimpleIdentity.Setup\Daniel15.SimpleIdentity.Setup.xproj", "{58BE296D-2769-4A94-80CD-D127A5272B00}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleAuth", "src\Daniel15.SimpleAuth\Daniel15.SimpleAuth.xproj", "{1B85C123-19EB-47DF-9E10-82ED0896ED45}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleIdentity", "src\Daniel15.SimpleIdentity\Daniel15.SimpleIdentity.xproj", "{1B85C123-19EB-47DF-9E10-82ED0896ED45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

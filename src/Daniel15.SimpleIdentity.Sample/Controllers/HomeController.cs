@@ -7,7 +7,7 @@
 
 using Microsoft.AspNet.Mvc;
 
-namespace Daniel15.SimpleAuth.Sample.Controllers
+namespace Daniel15.SimpleIdentity.Sample.Controllers
 {
 	public class HomeController : Controller
 	{

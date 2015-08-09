@@ -7,13 +7,13 @@
 
 using System.Collections.Generic;
 
-namespace Daniel15.SimpleAuth
+namespace Daniel15.SimpleIdentity
 {
 	/// <summary>
-	/// Configuration section for SimpleAuth
+	/// Configuration section for SimpleIdentity
 	/// </summary>
 	/// <typeparam name="TUser">Model type of the user</typeparam>
-	public class Configuration<TUser> where TUser : SimpleAuthUser
+	public class Configuration<TUser> where TUser : SimpleIdentityUser
 	{
 		/// <summary>
 		/// Gets or sets all the users contained within the configuration.

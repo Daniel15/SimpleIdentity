@@ -6,19 +6,19 @@
  */
 
 using System.Threading.Tasks;
-using Daniel15.SimpleAuth.Sample.ViewModels;
+using Daniel15.SimpleIdentity.Sample.ViewModels;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 
-namespace Daniel15.SimpleAuth.Sample.Controllers
+namespace Daniel15.SimpleIdentity.Sample.Controllers
 {
 	[Authorize]
 	public class AccountController : Controller
 	{
-		private readonly SignInManager<SimpleAuthUser> _signInManager;
+		private readonly SignInManager<SimpleIdentityUser> _signInManager;
 
-		public AccountController(SignInManager<SimpleAuthUser> signInManager)
+		public AccountController(SignInManager<SimpleIdentityUser> signInManager)
 		{
 			_signInManager = signInManager;
 		}

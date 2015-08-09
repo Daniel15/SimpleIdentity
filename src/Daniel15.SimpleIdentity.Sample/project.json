@@ -1,6 +1,6 @@
 {
     "webroot": "wwwroot",
-    "userSecretsId": "aspnet5-Daniel15.SimpleAuth.Sample-09036ebf-0588-4ff1-beae-b03160ba179a",
+    "userSecretsId": "aspnet5-Daniel15.SimpleIdentity.Sample-09036ebf-0588-4ff1-beae-b03160ba179a",
     "version": "1.0.0-*",
 
     "dependencies": {
@@ -20,7 +20,7 @@
         "Microsoft.Framework.Logging": "1.0.0-beta6",
         "Microsoft.Framework.Logging.Console": "1.0.0-beta6",
         "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-beta6",
-        "Daniel15.SimpleAuth": "1.0.0-*"
+        "Daniel15.SimpleIdentity": "1.0.0-*"
     },
 
     "commands": {
