@@ -10,7 +10,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
-using Microsoft.Framework.OptionsModel;
+using Microsoft.Extensions.OptionsModel;
 
 namespace Daniel15.SimpleIdentity
 {
@@ -32,7 +32,7 @@ namespace Daniel15.SimpleIdentity
 		/// <param name="config">The configuration to use</param>
 		public UserStore(IOptions<Configuration<TUser>> config)
 		{
-			_config = config.Options;
+			_config = config.Value;
 		}
 
 		/// <summary>

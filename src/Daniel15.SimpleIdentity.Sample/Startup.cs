@@ -8,10 +8,10 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Diagnostics.Entity;
 using Microsoft.AspNet.Hosting;
-using Microsoft.Framework.Configuration;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.Logging;
-using Microsoft.Framework.Runtime;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace Daniel15.SimpleIdentity.Sample
 {
@@ -21,7 +21,7 @@ namespace Daniel15.SimpleIdentity.Sample
 		{
 			// Setup configuration sources.
 
-			var builder = new ConfigurationBuilder(appEnv.ApplicationBasePath)
+			var builder = new ConfigurationBuilder()
 				.AddJsonFile("config.json")
 				.AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
 
@@ -42,7 +42,7 @@ namespace Daniel15.SimpleIdentity.Sample
 		{
 			// Add Identity services to the services container.
 			services.AddIdentity<SimpleIdentityUser, SimpleIdentityRole>()
-				.AddSimpleIdentity<SimpleIdentityUser>(Configuration.GetConfigurationSection("Auth"))
+				.AddSimpleIdentity<SimpleIdentityUser>(Configuration.GetSection("Auth"))
 				.AddDefaultTokenProviders();
 
 			// Add MVC services to the services container.
@@ -52,6 +52,9 @@ namespace Daniel15.SimpleIdentity.Sample
 		// Configure is called after ConfigureServices is called.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 		{
+			// Add the platform handler to the request pipeline.
+			app.UseIISPlatformHandler();
+
 			loggerFactory.MinimumLevel = LogLevel.Information;
 			loggerFactory.AddConsole();
 
@@ -61,14 +64,14 @@ namespace Daniel15.SimpleIdentity.Sample
 			if (env.IsDevelopment())
 			{
 				app.UseBrowserLink();
-				app.UseErrorPage();
-				app.UseDatabaseErrorPage(DatabaseErrorPageOptions.ShowAll);
+				app.UseDeveloperExceptionPage();
+				app.UseDatabaseErrorPage(options => options.EnableAll());
 			}
 			else
 			{
 				// Add Error handling middleware which catches all application specific errors and
 				// sends the request to the following path or controller action.
-				app.UseErrorHandler("/Home/Error");
+				app.UseExceptionHandler("/Home/Error");
 			}
 
 			// Add static files to the request pipeline.

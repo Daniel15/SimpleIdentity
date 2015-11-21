@@ -60,6 +60,10 @@ For a full example, see the included [sample project](https://github.com/Daniel1
 
 Changelog
 =========
+1.0.1 - 20th November 2015
+--------------------------
+ - Upgrade to ASP.NET 5 RC 1
+
 1.0 - 8th August 2015
 -------------------------
  - Initial release

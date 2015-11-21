@@ -6,8 +6,8 @@
  */
 
 using Microsoft.AspNet.Identity;
-using Microsoft.Framework.Configuration;
-using Microsoft.Framework.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Daniel15.SimpleIdentity
 {

@@ -7,7 +7,7 @@
   "licenseUrl": "https://github.com/Daniel15/SimpleIdentity/blob/master/LICENSE",
 
   "dependencies": {
-    "Daniel15.SimpleIdentity": "1.0.0-*",
+    "Daniel15.SimpleIdentity": "1.0.1-*",
     "Newtonsoft.Json": "7.0.1"
   },
 
@@ -19,7 +19,7 @@
     "dnx451": { },
     "dnxcore50": {
       "dependencies": {
-        "System.Console": "4.0.0-beta-23109"
+        "System.Console": "4.0.0-beta-23516"
       }
     }
   },
