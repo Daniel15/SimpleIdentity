@@ -17,7 +17,7 @@ Install-Package Daniel15.SimpleIdentity
 
 Create configuration. SimpleIdentity uses the [standard ASP.NET configuration library](http://docs.asp.net/en/latest/fundamentals/configuration.html). Running `Daniel15.SimpleIdentity.Setup` will allow you to enter a email address and password, and output the required config section. An example using `user@example.com` as the email address and `password` as the password:
 
-```json
+```js
     "Auth": {
         "Users": {
             "USER@EXAMPLE.COM": {
