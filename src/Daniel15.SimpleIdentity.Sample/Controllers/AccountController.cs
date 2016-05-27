@@ -7,9 +7,9 @@
 
 using System.Threading.Tasks;
 using Daniel15.SimpleIdentity.Sample.ViewModels;
-using Microsoft.AspNet.Authorization;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Daniel15.SimpleIdentity.Sample.Controllers
 {

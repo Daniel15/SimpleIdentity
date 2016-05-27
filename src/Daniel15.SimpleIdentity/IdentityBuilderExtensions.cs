@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree. 
  */
 
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

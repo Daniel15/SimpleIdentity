@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree. 
  */
 
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Daniel15.SimpleIdentity.Sample.Controllers
 {

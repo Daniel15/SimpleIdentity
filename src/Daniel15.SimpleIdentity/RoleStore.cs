@@ -8,7 +8,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 
 namespace Daniel15.SimpleIdentity
 {
@@ -23,7 +23,7 @@ namespace Daniel15.SimpleIdentity
 		/// </summary>
 		/// <param name="role">The role to create in the store.</param><param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
-		/// A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/> of the asynchronous query.
+		/// A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the asynchronous query.
 		/// </returns>
 		public Task<IdentityResult> CreateAsync(TRole role, CancellationToken cancellationToken)
 		{
@@ -35,7 +35,7 @@ namespace Daniel15.SimpleIdentity
 		/// </summary>
 		/// <param name="role">The role to update in the store.</param><param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
-		/// A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/> of the asynchronous query.
+		/// A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the asynchronous query.
 		/// </returns>
 		public Task<IdentityResult> UpdateAsync(TRole role, CancellationToken cancellationToken)
 		{
@@ -47,7 +47,7 @@ namespace Daniel15.SimpleIdentity
 		/// </summary>
 		/// <param name="role">The role to delete from the store.</param><param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
-		/// A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/> of the asynchronous query.
+		/// A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the asynchronous query.
 		/// </returns>
 		public Task<IdentityResult> DeleteAsync(TRole role, CancellationToken cancellationToken)
 		{

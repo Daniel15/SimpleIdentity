@@ -1,14 +1,14 @@
 ASP.NET SimpleIdentity
 ======================
 
-A simple ASP.NET 5 authentication and identity provider, ideal for smaller websites. Valid users are specified in a simple configuration file rather than a database.
+A simple ASP.NET Core authentication and identity provider, ideal for smaller websites. Valid users are specified in a simple configuration file rather than a database.
 
 Bug reports and feature requests are welcome!
 
 Installation
 ============
 
-If you are creating a brand new ASP.NET 5 web application, ensure you select "No Authentication" when creating it.
+If you are creating a brand new ASP.NET Core web application, ensure you select "No Authentication" when creating it.
 
 Install NuGet package:
 ```
@@ -60,6 +60,10 @@ For a full example, see the included [sample project](https://github.com/Daniel1
 
 Changelog
 =========
+1.1.0 - 27th May 2016
+---------------------
+ - Upgrade to ASP.NET Core RC 2
+
 1.0.1 - 20th November 2015
 --------------------------
  - Upgrade to ASP.NET 5 RC 1

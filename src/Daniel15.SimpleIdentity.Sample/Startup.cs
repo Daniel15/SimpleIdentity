@@ -5,23 +5,22 @@
  * LICENSE file in the root directory of this source tree. 
  */
 
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Diagnostics.Entity;
-using Microsoft.AspNet.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 
 namespace Daniel15.SimpleIdentity.Sample
 {
 	public class Startup
 	{
-		public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
+		public Startup(IHostingEnvironment env)
 		{
 			// Setup configuration sources.
 
 			var builder = new ConfigurationBuilder()
+				.SetBasePath(env.ContentRootPath)
 				.AddJsonFile("config.json")
 				.AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
 
@@ -31,11 +30,10 @@ namespace Daniel15.SimpleIdentity.Sample
 				// For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
 				builder.AddUserSecrets();
 			}
-			builder.AddEnvironmentVariables();
 			Configuration = builder.Build();
 		}
 
-		public IConfiguration Configuration { get; set; }
+		public IConfigurationRoot Configuration { get; set; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
@@ -52,10 +50,6 @@ namespace Daniel15.SimpleIdentity.Sample
 		// Configure is called after ConfigureServices is called.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 		{
-			// Add the platform handler to the request pipeline.
-			app.UseIISPlatformHandler();
-
-			loggerFactory.MinimumLevel = LogLevel.Information;
 			loggerFactory.AddConsole();
 
 			// Configure the HTTP request pipeline.
@@ -65,7 +59,6 @@ namespace Daniel15.SimpleIdentity.Sample
 			{
 				app.UseBrowserLink();
 				app.UseDeveloperExceptionPage();
-				app.UseDatabaseErrorPage(options => options.EnableAll());
 			}
 			else
 			{

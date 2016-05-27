@@ -1,23 +1,30 @@
 ﻿{
-  "version": "1.0.1-*",
+  "version": "1.1.0-*",
   "title": "ASP.NET SimpleIdentity",
   "description": "Simple ASP.NET 5 authentication and identity provider. Valid users are specified in a simple configuration file. Please refer to the project site at http://dan.cx/projects/SimpleIdentity for full installation instructions, usage examples, and sample code.",
   "authors": [ "Daniel Lo Nigro" ],
-  "tags": [ "authentication", "authorization", "identity", "configuration" ],
-  "projectUrl": "http://dan.cx/projects/simpleidentity",
-  "licenseUrl": "https://github.com/Daniel15/SimpleIdentity/blob/master/LICENSE",
 
   "dependencies": {
-    "Microsoft.AspNet.Identity": "3.0.0-rc1-final"
+    "Microsoft.AspNetCore.Identity": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-rc2-final"
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "net451": { },
+    "netstandard1.3": {
+      "dependencies": {
+        "System.Linq.Queryable": "4.0.1-rc2-24027"
+      }
+    }
   },
 
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Daniel15/SimpleIdentity"
-  } 
+  "packOptions": {
+    "tags": [ "authentication", "authorization", "identity", "configuration" ],
+    "projectUrl": "http://dan.cx/projects/simpleidentity",
+    "licenseUrl": "https://github.com/Daniel15/SimpleIdentity/blob/master/LICENSE",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/Daniel15/SimpleIdentity"
+    }
+  }
 }

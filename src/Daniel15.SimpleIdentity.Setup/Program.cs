@@ -7,7 +7,7 @@
 
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 
 namespace Daniel15.SimpleIdentity.Setup
@@ -17,7 +17,7 @@ namespace Daniel15.SimpleIdentity.Setup
 	/// </summary>
 	public class Program
 	{
-		public void Main(string[] args)
+		public static void Main(string[] args)
 		{
 			Console.WriteLine(
 				"Setup for SimpleIdentity. Enter your details and the relevant config section will "+

@@ -9,8 +9,8 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.Extensions.OptionsModel;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 
 namespace Daniel15.SimpleIdentity
 {
@@ -233,7 +233,7 @@ namespace Daniel15.SimpleIdentity
 		/// <param name="user">The user to create.</param>
 		/// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
-		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/> of the creation operation.
+		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the creation operation.
 		/// </returns>
 		public Task<IdentityResult> CreateAsync(TUser user, CancellationToken cancellationToken)
 		{
@@ -246,7 +246,7 @@ namespace Daniel15.SimpleIdentity
 		/// <param name="user">The user to update.</param>
 		/// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
-		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/> of the update operation.
+		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the update operation.
 		/// </returns>
 		public Task<IdentityResult> UpdateAsync(TUser user, CancellationToken cancellationToken)
 		{
@@ -259,7 +259,7 @@ namespace Daniel15.SimpleIdentity
 		/// <param name="user">The user to delete.</param>
 		/// <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> used to propagate notifications that the operation should be canceled.</param>
 		/// <returns>
-		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNet.Identity.IdentityResult"/> of the update operation.
+		/// The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the update operation.
 		/// </returns>
 		public Task<IdentityResult> DeleteAsync(TUser user, CancellationToken cancellationToken)
 		{
