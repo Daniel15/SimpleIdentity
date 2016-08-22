@@ -60,6 +60,10 @@ For a full example, see the included [sample project](https://github.com/Daniel1
 
 Changelog
 =========
+1.2.0 - 21st August 2016
+------------------------
+ - Upgrade to ASP.NET Core RTM
+
 1.1.0 - 27th May 2016
 ---------------------
  - Upgrade to ASP.NET Core RC 2
