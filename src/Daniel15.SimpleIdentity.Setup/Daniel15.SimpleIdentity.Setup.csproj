@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET SimpleIdentity Setup</Description>
+    <Authors>Daniel Lo Nigro</Authors>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <AssemblyName>Daniel15.SimpleIdentity.Setup</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Daniel15.SimpleIdentity.Setup</PackageId>
+    <PackageTags>authentication;authorization;identity;configuration</PackageTags>
+    <PackageProjectUrl>http://dan.cx/projects/simpleidentity</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Daniel15/SimpleIdentity/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/Daniel15/SimpleIdentity</RepositoryUrl>
+    <RuntimeFrameworkVersion Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">2.0.0</RuntimeFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Daniel15.SimpleIdentity\Daniel15.SimpleIdentity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+</Project>

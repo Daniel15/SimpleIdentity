@@ -1,21 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{41322533-AE98-484B-9571-A8CDF5C4DC87}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{88FDD6FD-521A-4625-B63A-F43800DB0386}"
 	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleIdentity.Sample", "src\Daniel15.SimpleIdentity.Sample\Daniel15.SimpleIdentity.Sample.xproj", "{F3202239-ED1F-4F72-A13E-3438F8EC9CF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Daniel15.SimpleIdentity.Sample", "src\Daniel15.SimpleIdentity.Sample\Daniel15.SimpleIdentity.Sample.csproj", "{F3202239-ED1F-4F72-A13E-3438F8EC9CF4}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleIdentity.Setup", "src\Daniel15.SimpleIdentity.Setup\Daniel15.SimpleIdentity.Setup.xproj", "{58BE296D-2769-4A94-80CD-D127A5272B00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Daniel15.SimpleIdentity.Setup", "src\Daniel15.SimpleIdentity.Setup\Daniel15.SimpleIdentity.Setup.csproj", "{58BE296D-2769-4A94-80CD-D127A5272B00}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Daniel15.SimpleIdentity", "src\Daniel15.SimpleIdentity\Daniel15.SimpleIdentity.xproj", "{1B85C123-19EB-47DF-9E10-82ED0896ED45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Daniel15.SimpleIdentity", "src\Daniel15.SimpleIdentity\Daniel15.SimpleIdentity.csproj", "{1B85C123-19EB-47DF-9E10-82ED0896ED45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,5 +42,8 @@ Global
 		{F3202239-ED1F-4F72-A13E-3438F8EC9CF4} = {41322533-AE98-484B-9571-A8CDF5C4DC87}
 		{58BE296D-2769-4A94-80CD-D127A5272B00} = {41322533-AE98-484B-9571-A8CDF5C4DC87}
 		{1B85C123-19EB-47DF-9E10-82ED0896ED45} = {41322533-AE98-484B-9571-A8CDF5C4DC87}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D74D938-CA74-4AAA-BA62-32D89DC0F8CD}
 	EndGlobalSection
 EndGlobal

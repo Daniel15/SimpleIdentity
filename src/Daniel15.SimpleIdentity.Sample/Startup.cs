@@ -7,6 +7,7 @@
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -15,25 +16,12 @@ namespace Daniel15.SimpleIdentity.Sample
 {
 	public class Startup
 	{
-		public Startup(IHostingEnvironment env)
+		public Startup(IConfiguration configuration)
 		{
-			// Setup configuration sources.
-
-			var builder = new ConfigurationBuilder()
-				.SetBasePath(env.ContentRootPath)
-				.AddJsonFile("config.json")
-				.AddJsonFile($"config.{env.EnvironmentName}.json", optional: true);
-
-			if (env.IsDevelopment())
-			{
-				// This reads the configuration keys from the secret store.
-				// For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-				builder.AddUserSecrets();
-			}
-			Configuration = builder.Build();
+			Configuration = configuration;
 		}
 
-		public IConfigurationRoot Configuration { get; set; }
+		public IConfiguration Configuration { get; set; }
 
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
@@ -71,7 +59,7 @@ namespace Daniel15.SimpleIdentity.Sample
 			app.UseStaticFiles();
 
 			// Add cookie-based authentication to the request pipeline.
-			app.UseIdentity();
+			app.UseAuthentication();
 
 			// Add MVC to the request pipeline.
 			app.UseMvc(routes =>
