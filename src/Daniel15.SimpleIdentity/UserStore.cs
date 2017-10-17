@@ -9,6 +9,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Daniel15.SimpleIdentity.Exceptions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
@@ -33,6 +34,10 @@ namespace Daniel15.SimpleIdentity
 		public UserStore(IOptions<Configuration<TUser>> config)
 		{
 			_config = config.Value;
+			if (_config?.Users == null)
+			{
+				throw new InvalidConfigException();
+			}
 		}
 
 		/// <summary>
