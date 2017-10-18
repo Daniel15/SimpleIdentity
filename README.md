@@ -45,7 +45,7 @@ public void ConfigureServices(IServiceCollection services)
 Enable identity services by adding this before `app.UseMvc`:
 ```csharp
 // Add cookie-based authentication to the request pipeline.
-app.UseIdentity();
+app.UseAuthentication();
 ```
 
 Create login form. Some example files are included, based off the regular ASP.NET authentication:
@@ -60,6 +60,11 @@ For a full example, see the included [sample project](https://github.com/Daniel1
 
 Changelog
 =========
+2.0.0 - 17th October 2017
+-------------------------
+ - Upgrade to ASP.NET Core 2.0
+ - Throw better error message when config is missing
+ 
 1.2.0 - 21st August 2016
 ------------------------
  - Upgrade to ASP.NET Core RTM
