@@ -60,6 +60,10 @@ For a full example, see the included [sample project](https://github.com/Daniel1
 
 Changelog
 =========
+3.0.0 - 6th October 2023
+------------------------
+ - Upgrade to ASP.NET Core 7.0. Note that if you are upgrading from an older version, you will need to re-hash the passwords by running `Daniel15.SimpleIdentity.Setup` again.
+
 2.0.0 - 17th October 2017
 -------------------------
  - Upgrade to ASP.NET Core 2.0

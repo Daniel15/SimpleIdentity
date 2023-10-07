@@ -48,8 +48,8 @@ namespace Daniel15.SimpleIdentity.Setup
 			var normalizer = new UpperInvariantLookupNormalizer();
 			var user = new SimpleIdentityUser
 			{
-				Email = email,
-				NormalizedUserName = normalizer.Normalize(email),
+				Email = normalizer.NormalizeEmail(email),
+				NormalizedUserName = normalizer.NormalizeName(email),
 			};
 			var hasher = new PasswordHasher<SimpleIdentityUser>();
 			user.PasswordHash = hasher.HashPassword(user, password);
